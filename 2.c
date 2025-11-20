@@ -17,14 +17,14 @@ int main(int argc, char** argv) {
 
     int n = atoi(argv[1]);
     if (n <= 0) return 1;
-    float *massive = malloc(n * sizeof(int));
+    float *m = malloc(n * sizeof(int));
     long fn = f(n);
 
     printf("массив\n");
 
     for (int i=1;i<n+1;i++){
         float C = fn/(f((n-i))*f(i));
-        massive[i]=(C);
+        m[i]=(C);
         printf("%.2f ",C);
     }
 
